@@ -1,0 +1,124 @@
+{
+  "name": "next-styledcomponent-prisma-yoga-boilerplate",
+  "version": "1.0.0",
+  "description": "Imran Irshad Boilerplate ",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "heroku-postbuild": "npm run build"
+  },
+  "dependencies": {
+    "@apollo/react-hooks": "3.1.3",
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
+    "apollo-boost": "^0.4.7",
+    "apollo-client": "^2.6.8",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-plugin-styled-components": "^1.10.6",
+    "bootstrap": "^4.4.1",
+    "downshift": "^4.0.6",
+    "graphql": "^14.5.8",
+    "graphql-tag": "^2.10.1",
+    "lodash.debounce": "^4.0.8",
+    "next": "^9.2.0",
+    "next-compose-plugins": "^2.2.0",
+    "next-with-apollo": "^4.3.0",
+    "node-sass": "^4.13.1",
+    "nprogress": "^0.2.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-apollo": "^3.1.3",
+    "react-dom": "^16.12.0",
+    "react-hook-form": "^4.5.5",
+    "react-toastify": "^5.5.0",
+    "reactstrap": "^8.3.2",
+    "styled-components": "^5.0.0",
+    "styled-icons": "^9.2.0",
+    "styled-media-query": "^2.1.2"
+  },
+  "keywords": [
+    "Imran",
+    "Irshad",
+    "Boilrtplate"
+  ],
+  "author": "Imran Irshad",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-jest": "^24.9.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "casual": "^1.6.2",
+    "enzyme-to-json": "^3.4.3",
+    "graphql-tools": "^4.0.6",
+    "jest": "^24.9.0",
+    "jest-transform-graphql": "^2.1.0"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/jest.setup.js",
+    "testPathIgnorePatterns": [
+      "<rootDir>/.next/",
+      "<rootDir>/node_modules/"
+    ],
+    "transform": {
+      "\\.(gql|graphql)$": "jest-transform-graphql",
+      ".*": "babel-jest",
+      "^.+\\.js?$": "babel-jest"
+    }
+  },
+  "//": "This is our babel config, I prefer this over a .babelrc file",
+  "babel": {
+    "env": {
+      "development": {
+        "presets": [
+          "next/babel"
+        ],
+        "plugins": [
+          [
+            "styled-components",
+            {
+              "ssr": true,
+              "displayName": true,
+              "preprocess": false
+            }
+          ]
+        ]
+      },
+      "production": {
+        "presets": [
+          "next/babel"
+        ],
+        "plugins": [
+          [
+            "styled-components",
+            {
+              "ssr": true,
+              "displayName": true
+            }
+          ]
+        ]
+      },
+      "test": {
+        "presets": [
+          [
+            "next/babel",
+            {
+              "preset-env": {
+                "modules": "commonjs"
+              }
+            }
+          ]
+        ],
+        "plugins": [
+          [
+            "styled-components",
+            {
+              "ssr": true,
+              "displayName": true
+            }
+          ]
+        ]
+      }
+    }
+  }
+}
