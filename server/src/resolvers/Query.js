@@ -2,6 +2,9 @@ const { forwardTo } = require("prisma-binding");
 const isAdmin = require("../Utills/isAdmin");
 
 const Query = {
+  //TODO Remove This Query
+  // this is just to test frontend query
+  users: forwardTo("prisma"),
   async me(parent, args, ctx, info) {
     const { userId } = ctx.request;
     if (!userId) return null;

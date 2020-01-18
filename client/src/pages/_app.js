@@ -16,6 +16,16 @@ const theme = {
 };
 
 class MyApp extends App {
+  static async getInitialProps({ Component, ctx }) {
+    let pageProps = {};
+
+    if (Component.getInitialProps) {
+      pageProps = await Component.getInitialProps(ctx);
+    }
+    // console.log(ctx);
+    pageProps.query = ctx.query;
+    return { pageProps };
+  }
   render() {
     const { Component, pageProps, apollo } = this.props;
     return (
