@@ -2,7 +2,7 @@ import App from "next/app";
 import React from "react";
 import { ThemeProvider } from "styled-components";
 import { ApolloProvider } from "@apollo/react-hooks";
-import withData from "../lib/withData";
+import withData from "../components/Utills/withData";
 import { ToastContainer, toast } from "react-toastify";
 import Meta from "../components/Meta/Meta";
 import { GlobalStyle } from "../Styles/GlobalStyles";
