@@ -18,6 +18,7 @@ import { USERS } from "../../Account/AccountResolvers";
 import { useQuery } from "@apollo/react-hooks";
 import { toast } from "react-toastify";
 import Spinner from "../../Utills/Spinner";
+import ErrorMessage from "../../Utills/ErrorHandling/ErrorAlert";
 
 const NavbarComponent = props => {
   const { data, loading, error } = useQuery(USERS);
@@ -25,10 +26,9 @@ const NavbarComponent = props => {
 
   const toggle = () => setIsOpen(!isOpen);
 
-  if (loading) return <p>loading</p>;
-  if (error) return <p>{error.message}</p>;
+  if (loading) return <Spinner />;
+  if (error) return <ErrorMessage error={error} />;
 
-  console.log(data);
   return (
     <div>
       <Navbar color="light" light expand="md">

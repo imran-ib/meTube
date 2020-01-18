@@ -7,7 +7,7 @@ function Spinner({ children }) {
   return (
     <LoadingOverlay
       active={true}
-      spinner={<Loader type="Watch" color="#00BFFF" height={200} width={200} />}
+      spinner={<Loader type="Watch" color="#00BFFF" height={100} width={100} />}
     ></LoadingOverlay>
   );
 }
