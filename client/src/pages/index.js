@@ -1,8 +1,9 @@
 import Layout from "../components/layout/Layout";
+import VideoListContainer from "../components/VidoeListContainer/VideoListContainer";
 
 const Home = props => (
   <Layout>
-    <h1>Home</h1>
+    <VideoListContainer />
   </Layout>
 );
 

@@ -1,7 +1,7 @@
 {
-  "name": "next-styledcomponent-prisma-yoga-boilerplate",
+  "name": "metube",
   "version": "1.0.0",
-  "description": "Imran Irshad Boilerplate ",
+  "description": "youtube clone",
   "main": "index.js",
   "scripts": {
     "dev": "next",
@@ -43,7 +43,11 @@
   "keywords": [
     "Imran",
     "Irshad",
-    "Boilrtplate"
+    "metube",
+    "video",
+    "youtube",
+    "clone",
+    "youtube clone"
   ],
   "author": "Imran Irshad",
   "license": "MIT",

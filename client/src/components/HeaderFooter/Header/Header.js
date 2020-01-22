@@ -1,8 +1,10 @@
-import React from "react";
-import Navbar from "./Navbar";
+import React, { useState } from "react";
+import Navbar from "../Navbar/Navbar";
 
 import NProgress from "nprogress";
 import Router from "next/router";
+import SideNav from "../Navbar/Menu/SideNav/SideNav";
+import SideClosed from "../Navbar/Menu/SideNav/SideClosed";
 
 Router.onRouteChangeStart = () => {
   NProgress.start();
@@ -16,9 +18,11 @@ Router.onRouteChangeError = () => {
 };
 
 function Header() {
+  const [ToggleNav, setToggleNav] = useState(true);
   return (
     <div>
-      <Navbar />
+      <Navbar ToggleNav={ToggleNav} setToggleNav={setToggleNav} />
+      {ToggleNav ? <SideClosed /> : <SideNav />}
     </div>
   );
 }

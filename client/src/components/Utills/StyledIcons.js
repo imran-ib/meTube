@@ -15,6 +15,7 @@ export const UserIconStyle = Styled(User)``;
 export const FacebookSquareStyle = Styled(FacebookSquare)``;
 export const EmailIconStyle = Styled(Email)``;
 export const SocialGooglePlusCircularStyle = Styled(SocialGooglePlusCircular)``;
+
 export const ArrowRightAltStyle = Styled(ArrowRightAlt)`
 margin-right: 20px;
 margin-left: 10px;

@@ -1,7 +1,7 @@
 {
-  "name": "portfolio-server",
+  "name": "metube-server",
   "version": "1.0.0",
-  "description": "imran irshad portfolio ",
+  "description": "youtube clone ",
   "main": "index.js",
   "scripts": {
     "start": "nodemon -e js,graphql -x node src/index.js",
@@ -31,9 +31,9 @@
     ]
   },
   "keywords": [
-    "portfolio",
-    "web",
-    "developer",
+    "metube",
+    "video",
+    "youtube",
     "imran",
     "irshad"
   ],
